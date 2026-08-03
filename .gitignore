@@ -1,0 +1,51 @@
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual Environment ──────────────────────────────
+venv/
+env/
+.venv/
+
+# ── Django ───────────────────────────────────────────
+backend/.env
+backend/db.sqlite3
+backend/staticfiles/
+backend/media/
+backend/logs/
+
+# ── React ────────────────────────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ── Database ─────────────────────────────────────────
+*.sql
+*.sqlite3
+
+# ── OS Files ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ── Logs ─────────────────────────────────────────────
+*.log
+logs/
+
+# ── Docker ───────────────────────────────────────────
+.docker/
