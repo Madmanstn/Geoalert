@@ -1,6 +1,35 @@
-cd geoalert
+--------------------------------------------------------------------------------
+Clones the Repository
+
+Each team member runs this on their own machine:
+
+git clone https://github.com/Madmanstn/GeoAlert.git
+cd GeoAlert
+
+Then set up the backend:
+
 cd backend
-venv\Scripts\Activate.ps1   --- activate venv (virtual environment)
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install -r requirements/development.txt
+copy .env.example .env
+
+Then open .env and fill in their own database credentials.
+
+Then run migrations:
+
+python manage.py migrate
+python manage.py seed_data
+python manage.py runserver
+
+Then set up the frontend in a new terminal:
+
+cd frontend
+npm install
+copy .env.example .env
+npm start
+
+--------------------------------------------------------------------------------
 
 
 Install GDAL for Python 3.11 on Windows  ---- for POSTGIS
@@ -71,4 +100,6 @@ user = User.objects.create_superuser(email='admin@geoalert.gov.ph', password='Ad
 
 
 install POSTMAN Thunder Client in vscode
-to test the login endpoint:
+to test the login endpoint 
+
+or on browser
