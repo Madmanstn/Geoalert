@@ -16,11 +16,19 @@ copy .env.example .env
 
 Then open .env and fill in their own database credentials.
 
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=your-supabase-password
+DB_HOST=db.dxncngkzfgoxlocaomnv.supabase.co
+DB_PORT=5432
+
 Then run migrations:
 
 python manage.py migrate
 python manage.py seed_data
 python manage.py runserver
+
+
 
 Then set up the frontend in a new terminal:
 
